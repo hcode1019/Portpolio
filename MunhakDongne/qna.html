@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--https 외부파일에 관련하여 보안문제를 해결해주는 meta data-->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<title>문학동네</title>
+	<!--제이쿼리 3.6.0 링크-->
+	<script defer src="./js/jquery-3.6.0.min.js"></script>
+	<!--공통 Js file -->
+	<script defer src="./js/common.js"></script>
+
+	<!--qna js 링크-->
+	<script defer src="./js/qna.js"></script>
+
+	<!-- 구글폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+		rel="stylesheet" />
+
+	<!--구글아이콘-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+	<!--공통 css -->
+	<link rel="stylesheet" href="./css/common.css" />
+	<!-- link css -->
+	<link rel="stylesheet" href="./css/qna.css" />
+</head>
+
+<body>
+	<!-- 글로벌네비 start -->
+	<!-- 글로벌네비 start -->
+	<nav>
+		<div class="sub-menu">
+			<div class="sub-menu-contain">
+				<p class="login-inner"><a href="signin.html">Login</a></p>
+				<p class="signup-inner"><a href="signup.html">Join</a></p>
+				<ul class="sns-list">
+					<li class="item"><a href="#"><img src="./img/icon/facebook_g.png" alt="facebook icon"></a></li>
+					<li class="item"><a href="#"><img src="./img/icon/instagram_g.png" alt="instagram icon"></a></li>
+					<li class="item"><a href="#"><img src="./img/icon/twitter_g.png" alt="twitter icon"></a></li>
+					<li class="item"><a href="#"><img src="./img/icon/youtube_g.png" alt="youtube icon"></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-menu">
+			<h1 class="logo"><a href="index.html"><img src="./img/symbol.png" alt="문학동네 로고"></a></h1>
+			<ul class="menu-contain">
+
+				<li class="menu-item books-intro"><a href="#">도서소개</a>
+					<ul class="depth-contain">
+						<li class="depth-item">
+							<ul class="depth-01">
+								<li class="menu-item category-books"><a href="#">분야별 도서</a>
+									<ul class="depth-02">
+										<li class="menu-item" meta><a href="category.html"><span class="item-name">에세이</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">국내소설</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">해외소설</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">인문학</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">자연과학</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">청소년</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">경제경영</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">예술</span></a></li>
+										<li class="menu-item"><a href="">
+												<span class="item-name">여행/실용/요리</span>
+											</a></li>
+										<li class="menu-item"><a href=""><span class="item-name">시리즈/전집</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#">브랜드별 도서</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">문학동네</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">고유서가</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">글항아리</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">나무의 마음</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">달</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">아템포</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">아트북스</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">앨리스</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">콜라주</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">테이스트북스</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">톨</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">포레</span></a></li>
+									</ul>
+
+								</li>
+								<li class="menu-item"><a href="#">수상도서</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">문학동네 문학상</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">국내외 문학상</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#">매거진</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">바로보기</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#">정기구독</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">바로보기</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<div id="menu-bg-df" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_01.jpg" alt="모래알만 한 진실이라도">
+								<div class="text-inner">
+									<h3 class="book-title">모래알만 한 진실이라도</h3>
+									<h4 class="desc">
+										올 겨울도 많이 추웠지만 가끔 따스했고 <br>
+										자주 우울했지만 어쩌다 행복하기도 했다
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_02.jpg" alt="메구스타 칸쿤">
+								<div class="text-inner">
+									<h3 class="book-title">메구스타 칸쿤</h3>
+									<h4 class="desc">카리브해의 낭만을 간직한 중남미의 보석</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_04.jpg" alt="눈으로 만든 사람">
+								<div class="text-inner">
+									<h3 class="book-title">눈으로 만든 사람</h3>
+									<h4 class="desc">
+										아름답고 광포하고 쓸쓸한 소용돌이로 휘몰아치는 <br>
+										최은미 소설세계의 눈부신 분기점
+									</h4>
+								</div>
+							</a>
+						</div>
+
+						<div id="menu-bg-essay" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_05.jpg" alt="그래도 마지막까지 삶을 산다는 것">
+								<div class="text-inner">
+									<h3 class="book-title">그래도 마지막까지 삶을 산다는 것</h3>
+									<h4 class="desc">
+										매일 ‘죽음’과 마주하는 호스피스 병동 간호사들의 <br>
+										목소리로 돌아보는 삶의 가치와 코로나 시대의 풍경
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_06.jpg" alt="삶의 쉼표가 필요할 때">
+								<div class="text-inner">
+									<h3 class="book-title">삶의 쉼표가 필요할 때</h3>
+									<h4 class="desc">이병일 시인, 태원준 작가 강력추천! <br>
+										수많은 독자들을 울린 『삶의 쉼표가 필요할 때』</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_07.jpg" alt="이만하면 달콤한 인생입니다">
+								<div class="text-inner">
+									<h3 class="book-title">이만하면 달콤한 인생입니다</h3>
+									<h4 class="desc">
+										아픈 나와 마주 보며 왼손으로 쓴 일기
+									</h4>
+								</div>
+							</a>
+						</div>
+
+						<div id="menu-bg-ko" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_08.jpg" alt="시선으로부터">
+								<div class="text-inner">
+									<h3 class="book-title">시선으로부터</h3>
+									<h4 class="desc">
+										2021 서울국제도서전 기념 한정 리커버 <br>
+										『시선으로부터,』 하와이 에디션
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_09.jpg" alt="호수의 일">
+								<div class="text-inner">
+									<h3 class="book-title">호수의 일</h3>
+									<h4 class="desc">
+										얼어붙은 사춘기, 끝내 맞이하는 성장과 치유 <br>
+										『아몬드』 『유원』을 잇는 눈부신 성장소설</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_10.jpg" alt="쇼코의 미소">
+								<div class="text-inner">
+									<h3 class="book-title">쇼코의 미소</h3>
+									<h4 class="desc">
+										제 5회 젊은작가상 수상작 <br>
+
+									</h4>
+								</div>
+							</a>
+						</div>
+
+						<div id="menu-bg-in" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_11.jpg" alt="작가들의 비밀스러운 삶">
+								<div class="text-inner">
+									<h3 class="book-title">작가들의 비밀스러운 삶</h3>
+									<h4 class="desc">
+										미궁에 빠진 살인사건과 섬에 칩거하는 작가의 비밀은?
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_12.jpg" alt="테라피스트">
+								<div class="text-inner">
+									<h3 class="book-title">테라피스트</h3>
+									<h4 class="desc">
+										전 세계 수백만 독자가 열광하는 심리 스릴러 여왕 <br>
+										B. A. 패리스가 강렬한 최신작으로 화려하게 귀환했다!</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_13.jpg" alt="오늘 밤, 세계에서 이 사랑이 사라진다 해도">
+								<div class="text-inner">
+									<h3 class="book-title">오늘 밤, 세계에서 이 사랑이 사라진다 해도</h3>
+									<h4 class="desc">
+
+										제26회 전격소설대상 ‘미디어워크스문고상’ 수상작
+									</h4>
+								</div>
+							</a>
+						</div>
+
+					</ul>
+				</li>
+				<li class="menu-item company"><a href="#">회사소개</a>
+					<ul class="depth-contain">
+						<li class="depth-item">
+							<ul class="depth-01">
+								<li class="menu-item"><a href="brand.html">문학동네 출판그룹</a></li>
+								<li class="menu-item"><a href="#">문학동네가 걸어온 길</a></li>
+								<li class="menu-item"><a href="#">찾아오시는 길</a></li>
+								<li class="menu-item"><a href="#">제휴 문의</a></li>
+							</ul>
+						</li>
+						<div class="pic-contain">
+							<!--<div class="pic-inner">
+							<img src="./img/goods_14.jpg" alt="photo">
+						</div>-->
+						</div>
+					</ul>
+
+
+				</li>
+				<li class="menu-item book-club"><a href="#">북클럽</a>
+					<ul class="depth-contain">
+						<li class="depth-item">
+							<ul class="depth-01">
+								<li class="menu-item"><a href="#">북클럽 문학동네</a></li>
+								<li class="menu-item"><a href="#">북클럽 가입안내</a></li>
+								<li class="menu-item"><a href="#">뉴스레터</a></li>
+								<li class="menu-item"><a href="#">SHOP</a></li>
+								<li class="menu-item"><a href="#">FAQ</a></li>
+								<li class="menu-item"><a href="#">공지사항</a></li>
+							</ul>
+						</li>
+						<div class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-01.jpg" alt="문학동네">
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-02.jpg" alt="문학동네 북클럽 5기 모집">
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-03.jpg" alt="문학동네 맴버십 가입안내">
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-04.jpg" alt="북클럽샵">
+							</a>
+						</div>
+					</ul>
+				</li>
+				<!--<li class="menu-item support ano-type"><a href="#">고객지원</a>
+				<ul class="depth-contain">
+					<li class="depth-item">
+						<ul class="depth-01">
+							<li class="menu-item"><a href="qna.html">자주묻는 질문</a></li>
+							<li class="menu-item"><a href="#">공지사항</a></li>
+							<li class="menu-item"><a href="#">문학동네 공모전</a></li>
+							<li class="menu-item"><a href="#">투고문의</a></li>
+							<li class="menu-item"><a href="#">2차 저작권 이용 안내</a></li>
+							<li class="menu-item"><a href="#">자료실</a></li>
+						</ul>
+					</li>
+					<a href="#" class="contain">
+						<div>
+							<p>
+								채용안내 <br>
+								<span>문학동네에서 출판의 미래를 열어갈 인재 여러분을 기다립니다</span>
+							</p>
+							<p class="more"><span>자세히보기</span></p>
+						</div>
+					</a>
+				</ul>
+
+			</li>-->
+				<li class="menu-item about ano-type left-el"><a href="#">고객지원</a>
+					<ul class="depth-contain">
+						<li id="menu-supprot-bg" class="bg-contain active"></li>
+						<li id="menu-about-bg" class="bg-contain"></li>
+						<li class="depth-item" rel="menu-supprot-bg">Support
+							<ul class="depth-01">
+								<li class="menu-item"><a href="qna.html">자주묻는 질문</a></li>
+								<li class="menu-item"><a href="#">공지사항</a></li>
+								<li class="menu-item"><a href="#">문학동네 공모전</a></li>
+								<li class="menu-item"><a href="#">투고문의</a></li>
+								<li class="menu-item"><a href="#">2차 저작권 이용 안내</a></li>
+								<li class="menu-item"><a href="#">자료실</a></li>
+							</ul>
+						</li>
+						<li class="depth-item" rel="menu-about-bg">About Us
+							<ul class="depth-01">
+								<li class="menu-item"><a href="#">동네 책방</a></li>
+								<li class="menu-item"><a href="#">작가와의 만남</a></li>
+								<li class="menu-item"><a href="#">문학동네 북캐스트</a></li>
+								<li class="menu-item"><a href="#">카페콤마</a></li>
+								<li class="menu-item"><a href="#">완독 챌린지, 독파</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="sup-menu">
+				<li class="menu-item"><span id="searchBtn" class="material-icons-outlined">
+						search
+					</span></li>
+				<li class="menu-item">
+					<a href="#">
+						<span class="material-icons-outlined">
+							shopping_cart
+						</span>
+					</a>
+				</li>
+				<li class="menu-item"><a href="#"><span class="material-icons-outlined">
+							person_outline
+						</span></a></li>
+			</ul>
+		</div>
+	</nav>
+	<section class="search-item" id="searchBar">
+		<form action="">
+			<!-- 검색창 start -->
+			<input id="searchItem" type="search" placeholder="검색어를 입력하여 주세요">
+			<input type="submit" id="search-submit-btn">
+			<label for="search-submit-btn">
+				<span class="material-icons-outlined">
+					search
+				</span>
+			</label>
+			<ul class="tags" id="Tags">
+				<li class="tag-item">에세이</li>
+				<li class="tag-item">한국소설</li>
+				<li class="tag-item">인문학</li>
+				<li class="tag-item">심리학</li>
+				<li class="tag-item">여행</li>
+			</ul>
+		</form>
+		<div class="close-btn" id="closeBtn">
+			<span class="material-icons-outlined">
+				close
+			</span>
+		</div>
+	</section>
+	<!-- 검색창 end  -->
+
+	<!-- 글로벌네비 end -->
+	<section class="questions-inner">
+		<h2 class="title">자주 묻는 질문</h2>
+		<p class="desc">
+			자주 묻는 질문들을 종류별로 나누어 놓았습니다. <br />
+			궁금하신 내용의 버튼을 클릭하시면 해당 질문과 답변을 보실 수 있습니다.
+		</p>
+		<form class="search-el" action="">
+			<div class="contain">
+				<input type="search" placeholder="검색어를 입력하여 주세요." />
+				<input type="submit" value="검색" />
+			</div>
+		</form>
+		<div class="main-content">
+			<ul class="kind-contain">
+				<li class="list-item selected" rel="list_all"><span>전체</span></li>
+				<li class="list-item" rel="list-subsc"><span>정기구독</span></li>
+				<li class="list-item" rel="list-bookorder"><span>도서주문</span></li>
+				<li class="list-item" rel="list-contest">
+					<span>문학동네 공모</span>
+				</li>
+				<li class="list-item" rel="list-another"><span>기타</span></li>
+			</ul>
+			<div class="q-list-contain">
+				<ul id="list_all" class="q-list">
+					<li>
+						<input type="checkbox" id="q1" />
+						<label for="q1">
+							<h3>
+								계간지를 받는 주소지를 변경하고 싶습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								관리부 메일(mundong@munhak.com)이나 전화(031-955-3580)로
+								변경된 주소를 알려주시면 다음 호부터 변경된 주소로 발송이
+								가능합니다. 변경 후에는 답메일로 안내를 드리고 있습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q2" />
+						<label for="q2">
+							<h3>
+								정기구독 신청은 어떻게 해야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								홈페이지 정기구독 신청 란을 이용하시거나 관리부
+								전화(031-955-3580)로 신청이 가능합니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q3" />
+						<label for="q3">
+							<h3>
+								해외에서 정기구독을 하려면 어떻게 해야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								홈페이지 정기구독 신청 란을 통해 신청이 가능합니다. 해외구독의
+								경우 지역별로 배송기간과 배송료 차이가 있습니다. 견적문의는
+								관리부 메일(mundong@munhak.com)을 통해 문의 바랍니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q4" />
+						<label for="q4">
+							<h3>
+								계간 문학동네 과월호(지난 호)는 어떻게 구입합니까?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								품절이 아닌 과월호는 관리부 메일(mundong@munhak.com)이나
+								전화(031-955-2661)로 구입 신청이 가능하며, 입금 확인 후 택배
+								접수되고 있습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q6" />
+						<label for="q6">
+							<h3>
+								문학동네 홈페이지에서 직접 도서를 구매 할 수 있나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								현재 문학동네출판그룹 홈페이지에서는 도서를 직접 판매하고 있지
+								않습니다. 그러나 대표적인 국내 온라인 서점에서 손쉽게 구매를
+								하실 수 있도록 모든 도서 상세정보 페이지에서 해당도서
+								구매링크를 제공하고 있습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q7" />
+						<label for="q7">
+							<h3>
+								품절,절판된 도서를 구입할 수 있나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								품절(재고소진) 절판(계약종료) 도서들로 당사에서는 도서 판매가
+								되지 않습니다.
+							</p>
+						</article>
+					</li>
+					<li>
+						<input type="checkbox" id="q8" />
+						<label for="q8">
+							<h3>
+								원고 매수를 정확히 지켜야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								분량은 대강의 기준입니다. 분량보다는 작품의 완성도를 중요하게
+								봅니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q9" />
+						<label for="q9">
+							<h3>
+								원고지에 써야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								한글이나 워드 프로그램에서 원고지 환산 매수를 확인할 수
+								있습니다. A4용지에 출력해서 보내주시는 게 좋습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q10" />
+						<label for="q10">
+							<h3>
+								이름과 연락처는 어디에 써야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								문학동네 공모전 소개 페이지에서 접수신청서를 다운받아 작성해서
+								보내주시면 됩니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q11" />
+						<label for="q11">
+							<h3>
+								꼭 제본해서 보내야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								원고는 간단한 제본을 하셔도 좋고 사무용 집게 등으로 묶어주셔도
+								상관없습니다. 낱장으로 흩어질 염려만 없으면 됩니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q12" />
+						<label for="q12">
+							<h3>
+								응모한 원고를 돌려받을 수 있나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								문학동네 공모에 응모한 작품은 돌려드리지 않습니다. 반드시
+								사본을 보내주셔야 합니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q13" />
+						<label for="q13">
+							<h3>
+								접수 확인은 어떻게 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								등기 우편과 택배를 이용하시면 우체국이나 택배 회사에서 확인할
+								수 있습니다.
+							</p>
+						</article>
+					</li>
+					<li>
+						<input type="checkbox" id="q14" />
+						<label for="q14">
+							<h3>
+								파본 도서를 교환하고 싶습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								파본도서는 구입하신 서점이나 본사에서 교환이 가능합니다. 본사
+								교환의 경우 교환 사유를 간단하게 메모하셔서 수신자 부담 택배로
+								도서를 보내주시면 검토 후 정상적인 도서로 바로 발송을
+								해드리겠습니다. 교환 받으실 주소와 연락처, 성함을 꼭
+								남겨주세요.
+								<br />
+								–주소 : 경기도 파주시 회동길 210 문학동네 3층 관리부
+								<br />
+								–전화 : 031-955-2661
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q15" />
+						<label for="q15">
+							<h3>
+								문학동네출판그룹 전체 도서목록을 보고 싶습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								개별 도서는 홈페이지에서 보실 수 있으며, 브랜드별 도서목록,
+								전체 도서목록은 고객지원>자료실에서 엑셀파일로 내려 받으시면
+								됩니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q16" />
+						<label for="q16">
+							<h3>
+								아이디(또는 비밀번호)를 잊어버렸어요. 어떻게 해야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								우측 상단의 로그인 > 비밀번호 찾기로 들어가셔서, 본인 확인을
+								위한 정보를 입력하신 후 이메일로 확인하실 수 있습니다.
+								<br />
+								이메일이 기억나지 않는 경우, web@munhak.com으로 성함과 함께
+								문의 메일을 접수해주세요.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q17" />
+						<label for="q17">
+							<h3>
+								동네서점, 로그인이 되지 않습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								동네서점 주문페이지( https://bit.ly/3rgguFL )에서 최초 1회
+								서점 등록한 이후에 아이디(동네서점의 사업자번호)로 로그인이
+								되지 않는 문제라면 newsletter@munhak.com로 메일 주시면, 임시
+								비밀번호를 발행해드립니다. 메일로 알려주세요.
+							</p>
+						</article>
+					</li>
+				</ul>
+
+				<ul id="list-subsc" class="q-list">
+					<li>
+						<input type="checkbox" id="q18" />
+						<label for="q18">
+							<h3>
+								계간지를 받는 주소지를 변경하고 싶습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								관리부 메일(mundong@munhak.com)이나 전화(031-955-3580)로
+								변경된 주소를 알려주시면 다음 호부터 변경된 주소로 발송이
+								가능합니다. 변경 후에는 답메일로 안내를 드리고 있습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q19" />
+						<label for="q19">
+							<h3>
+								정기구독 신청은 어떻게 해야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								홈페이지 정기구독 신청 란을 이용하시거나 관리부
+								전화(031-955-3580)로 신청이 가능합니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q20" />
+						<label for="q20">
+							<h3>
+								해외에서 정기구독을 하려면 어떻게 해야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								홈페이지 정기구독 신청 란을 통해 신청이 가능합니다. 해외구독의
+								경우 지역별로 배송기간과 배송료 차이가 있습니다. 견적문의는
+								관리부 메일(mundong@munhak.com)을 통해 문의 바랍니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q21" />
+						<label for="q21">
+							<h3>
+								계간 문학동네 과월호(지난 호)는 어떻게 구입합니까?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								품절이 아닌 과월호는 관리부 메일(mundong@munhak.com)이나
+								전화(031-955-2661)로 구입 신청이 가능하며, 입금 확인 후 택배
+								접수되고 있습니다.
+							</p>
+						</article>
+					</li>
+				</ul>
+
+				<ul id="list-bookorder" class="q-list">
+					<li>
+						<input type="checkbox" id="q22" />
+						<label for="q22">
+							<h3>
+								문학동네 홈페이지에서 직접 도서를 구매 할 수 있나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								현재 문학동네출판그룹 홈페이지에서는 도서를 직접 판매하고 있지
+								않습니다. 그러나 대표적인 국내 온라인 서점에서 손쉽게 구매를
+								하실 수 있도록 모든 도서 상세정보 페이지에서 해당도서
+								구매링크를 제공하고 있습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q23" />
+						<label for="q23">
+							<h3>
+								품절,절판된 도서를 구입할 수 있나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								품절(재고소진) 절판(계약종료) 도서들로 당사에서는 도서 판매가
+								되지 않습니다.
+							</p>
+						</article>
+					</li>
+				</ul>
+
+				<ul id="list-contest" class="q-list">
+					<li>
+						<input type="checkbox" id="q24" />
+						<label for="q24">
+							<h3>
+								원고 매수를 정확히 지켜야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								분량은 대강의 기준입니다. 분량보다는 작품의 완성도를 중요하게
+								봅니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q25" />
+						<label for="q25">
+							<h3>
+								원고지에 써야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								한글이나 워드 프로그램에서 원고지 환산 매수를 확인할 수
+								있습니다. A4용지에 출력해서 보내주시는 게 좋습니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q26" />
+						<label for="q26">
+							<h3>
+								이름과 연락처는 어디에 써야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								문학동네 공모전 소개 페이지에서 접수신청서를 다운받아 작성해서
+								보내주시면 됩니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q27" />
+						<label for="q27">
+							<h3>
+								꼭 제본해서 보내야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								원고는 간단한 제본을 하셔도 좋고 사무용 집게 등으로 묶어주셔도
+								상관없습니다. 낱장으로 흩어질 염려만 없으면 됩니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q28" />
+						<label for="q28">
+							<h3>
+								응모한 원고를 돌려받을 수 있나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								문학동네 공모에 응모한 작품은 돌려드리지 않습니다. 반드시
+								사본을 보내주셔야 합니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q29" />
+						<label for="q29">
+							<h3>
+								접수 확인은 어떻게 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								등기 우편과 택배를 이용하시면 우체국이나 택배 회사에서 확인할
+								수 있습니다.
+							</p>
+						</article>
+					</li>
+				</ul>
+
+				<ul id="list-another" class="q-list">
+					<li>
+						<input type="checkbox" id="q30" />
+						<label for="q30">
+							<h3>
+								파본 도서를 교환하고 싶습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								파본도서는 구입하신 서점이나 본사에서 교환이 가능합니다. 본사
+								교환의 경우 교환 사유를 간단하게 메모하셔서 수신자 부담 택배로
+								도서를 보내주시면 검토 후 정상적인 도서로 바로 발송을
+								해드리겠습니다. 교환 받으실 주소와 연락처, 성함을 꼭
+								남겨주세요.
+								<br />
+								–주소 : 경기도 파주시 회동길 210 문학동네 3층 관리부
+								<br />
+								–전화 : 031-955-2661
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q30" />
+						<label for="q30">
+							<h3>
+								문학동네출판그룹 전체 도서목록을 보고 싶습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								개별 도서는 홈페이지에서 보실 수 있으며, 브랜드별 도서목록,
+								전체 도서목록은 고객지원>자료실에서 엑셀파일로 내려 받으시면
+								됩니다.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q31" />
+						<label for="q31">
+							<h3>
+								아이디(또는 비밀번호)를 잊어버렸어요. 어떻게 해야 하나요?
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								우측 상단의 로그인 > 비밀번호 찾기로 들어가셔서, 본인 확인을
+								위한 정보를 입력하신 후 이메일로 확인하실 수 있습니다.
+								<br />
+								이메일이 기억나지 않는 경우, web@munhak.com으로 성함과 함께
+								문의 메일을 접수해주세요.
+							</p>
+						</article>
+					</li>
+
+					<li>
+						<input type="checkbox" id="q32" />
+						<label for="q32">
+							<h3>
+								동네서점, 로그인이 되지 않습니다.
+								<div class="arrow-btn">
+									<span>&gt</span>
+								</div>
+							</h3>
+						</label>
+						<article>
+							<p>
+								동네서점 주문페이지( https://bit.ly/3rgguFL )에서 최초 1회
+								서점 등록한 이후에 아이디(동네서점의 사업자번호)로 로그인이
+								되지 않는 문제라면 newsletter@munhak.com로 메일 주시면, 임시
+								비밀번호를 발행해드립니다. 메일로 알려주세요.
+							</p>
+						</article>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!--푸터 start-->
+	<footer>
+		<section class="section_top">
+			<p class="menu-item">
+				<a href="javascript:void[0]">개인정보 처리방침</a>
+				<a href="javascript:void[0]">이용약관</a>
+				<a href="javascript:void[0]">제휴문의</a>
+				<a href="javascript:void[0]">찾아오시는 길</a>
+				<a href="javascript:void[0]">채용안내</a>
+				<a href="javascript:void[0]">전화번호 안내</a>
+			</p>
+		</section>
+
+		<div class="footer-family">
+			<input type="checkbox" id="family-site_btn" />
+			<label class="family-site" for="family-site_btn">
+				패밀리 사이트 <img src="./img/icon/arrow-b.png" alt="arrow" />
+			</label>
+			<ul class="sites">
+				<li><a href="#">문학동네</a></li>
+				<li><a href="#">고유서가</a></li>
+				<li><a href="#">글항아리</a></li>
+				<li><a href="#">나무의마음</a></li>
+				<li><a href="#">난다</a></li>
+				<li><a href="#">달</a></li>
+				<li><a href="#">루페</a></li>
+				<li><a href="#">벨라루나</a></li>
+				<li><a href="#">싱긋</a></li>
+				<li><a href="#">아우름</a></li>
+				<li><a href="#">아템포</a></li>
+				<li><a href="#">아트북스</a></li>
+				<li><a href="#">애니북스</a></li>
+				<li><a href="#">앨리스</a></li>
+				<li><a href="#">에쎄</a></li>
+				<li><a href="#">엘릭시르</a></li>
+				<li><a href="#">오우아</a></li>
+				<li><a href="#">이봄</a></li>
+				<li><a href="#">이봄</a></li>
+				<li><a href="#">이콘</a></li>
+				<li><a href="#">차이</a></li>
+				<li><a href="#">콜라주</a></li>
+				<li><a href="#">테이스트북스</a></li>
+				<li><a href="#">톨</a></li>
+				<li><a href="#">포레</a></li>
+			</ul>
+		</div>
+
+		<section class="section_bottom">
+			<div class="company-info">
+				<h2>고객센터 : 031-955-8888</h2>
+				(주)문학동네<br />
+				10881 경기도 파주시 회동길 210<br />
+				사업자번호 208-81-24906<br />
+				대표자 : 김소영<br />
+				이메일 : editor@munhak.com<br />
+				대표 이메일 : web@munhak.com<br />
+				COPYRIGHT 2019 (주) MUNHAKDONGNE Crop
+			</div>
+
+			<div class="sns-ico">
+				<a href="javascript:void[0]"><img src="./img/icon/facebook.png" alt="" /></a>
+				<a href="javascript:void[0]"><img src="./img/icon/youtube.png" alt="" /></a>
+				<a href="javascript:void[0]"><img src="./img/icon/instagram.png" alt="" /></a>
+				<a href="javascript:void[0]"><img src="./img/icon/twitter.png" alt="" /></a>
+			</div>
+		</section>
+	</footer>
+	<!--푸터 end-->
+</body>
+
+</html>

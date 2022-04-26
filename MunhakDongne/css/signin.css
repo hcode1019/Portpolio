@@ -1,0 +1,176 @@
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif; */
+
+/* common start */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+ul li {
+  list-style: none;
+}
+
+.main {
+  margin-top: 80px;
+  background: url(../img/log-bg_05.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0;
+}
+.main .head {
+  font-size: 1.75rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.main .signin_inner {
+  /*width:30%;*/
+  width: 23%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+  /*애니메이션 시작*/
+
+  /*애니메이션 종료*/
+.main .signin_inner p {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  padding: 1.8rem 1rem;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  color: #333;
+}
+.main .signin_inner p span {
+  color: #203697;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.main .signin_inner form {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+}
+.main .signin_inner form fieldset {
+  border: none;
+  width: 100%;
+}
+.main .signin_inner form legend {
+  display: none;
+}
+.main .signin_inner form input {
+  display: block;
+  width: 100%;
+  margin: 0 auto 0.8rem;
+  height: 2rem;
+}
+.main .signin_inner form input[type="password"] {
+  margin-bottom: 1.2rem;
+}
+.main .signin_inner form .user-id,
+.main .signin_inner form .user-pwd {
+  padding-left: 1rem;
+  height: 3rem;
+  font-size: 1rem;
+}
+.main .signin_inner form #memorize {
+  display: none;
+  vertical-align: center;
+}
+.main .signin_inner form #memorize:checked ~ label[for="memorize"] img {
+  background-color: #203697;
+}
+.main .signin_inner form label {
+  margin: 0 0 10rem;
+}
+.main .signin_inner form label[for="memorize"] {
+  display: inline-block;
+  margin: 0 0 1.25rem;
+  padding-right: 0.5rem;
+}
+.main .signin_inner form label[for="memorize"]:hover {
+  cursor: pointer;
+}
+.main .signin_inner form label[for="memorize"] img {
+  width: 1.5rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+  background-color: rgb(230, 230, 230);
+  margin-right: 0.5rem;
+}
+.main .signin_inner form label[for="memorize"] span {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.main .signin_inner form input[type="submit"] {
+  /*font-size:1.2rem;*/
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #203697;
+  /*height:4.375rem;*/
+  height: 2.5rem;
+  border: none;
+}
+.main .signin_inner form input[type="submit"]:hover {
+  cursor: pointer;
+}
+.main .signin_inner .support {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1.2rem 1rem;
+}
+.main .signin_inner .support li {
+  float: left;
+  width: 33.333%;
+  position: relative;
+}
+.main .signin_inner .support li:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: rgb(200, 200, 200);
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 0;
+}
+.main .signin_inner .support li:last-child:after {
+  display: none;
+}
+
+.main .signin_inner .support li a {
+  display: block;
+  color: #999;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.375rem 0;
+}
+.main .signin_inner .support li:hover a {
+  color: #333;
+}

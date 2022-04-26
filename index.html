@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>포트폴리오</title>
+		<!-- 구글폰트 -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			html {
+				font-size: 16px;
+				font-family: "Nanum Gothic", sans-serif;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			.inner {
+				width: 100%;
+				height: 56.25vw;
+				border: 1px solid black;
+				background: url(./img/background-ge984bedc2_1920.jpg) no-repeat;
+				background-size: cover;
+				background-position: center;
+				position: relative;
+			}
+			.inner .content {
+				width: 40%;
+				margin: 0 auto;
+				background-color: #fff;
+				height: 50vw;
+				position: absolute;
+				left: 50%;
+				top: 5%;
+				transform: translateX(-50%);
+			}
+			.inner .content .title {
+				color: rgb(23, 30, 134);
+				font-size: 3rem;
+				font-weight: bold;
+				width: 50%;
+				margin: 250px auto 20px;
+			}
+			.inner .content .sub-title {
+				width: 50%;
+				margin: 0 auto;
+				font-size: 1.5rem;
+				color: #333;
+				margin-bottom: 40px;
+			}
+			.inner .content .para {
+				width: 50%;
+				margin: 0 auto;
+				line-height: 1.4;
+				margin-bottom: 100px;
+			}
+			.inner .content > div {
+				width: 50%;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.inner .content > div > a {
+				display: block;
+				width: 48%;
+				margin-right: 4%;
+				float: left;
+				line-height: 40px;
+				background-color: rgb(30, 35, 112);
+				color: #fff;
+				text-align: center;
+				border: 1px solid rgb(30, 35, 112);
+				transition: 0.3s;
+			}
+			.inner .content > div > a:hover {
+				background-color: #fff;
+				color: rgb(30, 35, 112);
+			}
+			.inner .content > div > a:last-child {
+				margin-right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="inner">
+			<div class="content">
+				<h2 class="title">Project Design</h2>
+				<h3 class="sub-title">문학동네 리뉴얼 웹사이트</h3>
+				<p class="para">
+					문학동네는 책을통해 사람과 사람을 잇고<br />
+					더 나은 미래를 만들기 위한 자세로 오늘을 임합니다.
+				</p>
+				<div>
+					<a
+						href="https://hansol-munhak-info.netlify.app/index.html"
+						class="btn"
+						>리뉴얼 웹사이트</a
+					>
+					<a href="https://www.munhak.com/" class="btn">기존 웹사이트</a>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

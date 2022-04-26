@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--https 외부파일에 관련하여 보안문제를 해결해주는 meta data-->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<title>문학동네</title>
+	<!--제이쿼리 3.6.0 링크-->
+	<script defer src="./js/jquery-3.6.0.min.js"></script>
+	<!--공통 Js file -->
+	<script defer src="./js/common.js"></script>
+
+	<!-- 구글폰트 -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+		rel="stylesheet" />
+
+	<!--구글아이콘-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+	<!--공통 css -->
+	<link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="./css/category.css" />
+</head>
+
+<body>
+	<!-- 글로벌네비 start -->
+	<nav>
+		<div class="sub-menu">
+			<div class="sub-menu-contain">
+				<p class="login-inner"><a href="signin.html">Login</a></p>
+				<p class="signup-inner"><a href="signup.html">Join</a></p>
+				<ul class="sns-list">
+					<li class="item"><a href="#"><img src="./img/icon/facebook_g.png" alt="facebook icon"></a></li>
+					<li class="item"><a href="#"><img src="./img/icon/instagram_g.png" alt="instagram icon"></a></li>
+					<li class="item"><a href="#"><img src="./img/icon/twitter_g.png" alt="twitter icon"></a></li>
+					<li class="item"><a href="#"><img src="./img/icon/youtube_g.png" alt="youtube icon"></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-menu">
+			<h1 class="logo"><a href="index.html"><img src="./img/symbol.png" alt="문학동네 로고"></a></h1>
+			<ul class="menu-contain">
+
+				<li class="menu-item books-intro"><a href="#">도서소개</a>
+					<ul class="depth-contain">
+						<li class="depth-item">
+							<ul class="depth-01">
+								<li class="menu-item category-books"><a href="#">분야별 도서</a>
+									<ul class="depth-02">
+										<li class="menu-item" meta><a href="category.html"><span class="item-name">에세이</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">국내소설</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">해외소설</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">인문학</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">자연과학</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">청소년</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">경제경영</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">예술</span></a></li>
+										<li class="menu-item"><a href="">
+												<span class="item-name">여행/실용/요리</span>
+											</a></li>
+										<li class="menu-item"><a href=""><span class="item-name">시리즈/전집</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#">브랜드별 도서</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">문학동네</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">고유서가</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">글항아리</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">나무의 마음</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">달</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">아템포</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">아트북스</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">앨리스</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">콜라주</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">테이스트북스</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">톨</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">포레</span></a></li>
+									</ul>
+
+								</li>
+								<li class="menu-item"><a href="#">수상도서</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">문학동네 문학상</span></a></li>
+										<li class="menu-item"><a href=""><span class="item-name">국내외 문학상</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#">매거진</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">바로보기</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#">정기구독</a>
+									<ul class="depth-02">
+										<li class="menu-item"><a href=""><span class="item-name">바로보기</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<div id="menu-bg-df" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_01.jpg" alt="모래알만 한 진실이라도">
+								<div class="text-inner">
+									<h3 class="book-title">모래알만 한 진실이라도</h3>
+									<h4 class="desc">
+										올 겨울도 많이 추웠지만 가끔 따스했고 <br>
+										자주 우울했지만 어쩌다 행복하기도 했다
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_02.jpg" alt="메구스타 칸쿤">
+								<div class="text-inner">
+									<h3 class="book-title">메구스타 칸쿤</h3>
+									<h4 class="desc">카리브해의 낭만을 간직한 중남미의 보석</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_04.jpg" alt="눈으로 만든 사람">
+								<div class="text-inner">
+									<h3 class="book-title">눈으로 만든 사람</h3>
+									<h4 class="desc">
+										아름답고 광포하고 쓸쓸한 소용돌이로 휘몰아치는 <br>
+										최은미 소설세계의 눈부신 분기점
+									</h4>
+								</div>
+							</a>
+						</div>
+
+						<div id="menu-bg-essay" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_05.jpg" alt="그래도 마지막까지 삶을 산다는 것">
+								<div class="text-inner">
+									<h3 class="book-title">그래도 마지막까지 삶을 산다는 것</h3>
+									<h4 class="desc">
+										매일 ‘죽음’과 마주하는 호스피스 병동 간호사들의 <br>
+										목소리로 돌아보는 삶의 가치와 코로나 시대의 풍경
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_06.jpg" alt="삶의 쉼표가 필요할 때">
+								<div class="text-inner">
+									<h3 class="book-title">삶의 쉼표가 필요할 때</h3>
+									<h4 class="desc">이병일 시인, 태원준 작가 강력추천! <br>
+										수많은 독자들을 울린 『삶의 쉼표가 필요할 때』</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_07.jpg" alt="이만하면 달콤한 인생입니다">
+								<div class="text-inner">
+									<h3 class="book-title">이만하면 달콤한 인생입니다</h3>
+									<h4 class="desc">
+										아픈 나와 마주 보며 왼손으로 쓴 일기
+									</h4>
+								</div>
+							</a>
+						</div>
+
+						<div id="menu-bg-ko" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_08.jpg" alt="시선으로부터">
+								<div class="text-inner">
+									<h3 class="book-title">시선으로부터</h3>
+									<h4 class="desc">
+										2021 서울국제도서전 기념 한정 리커버 <br>
+										『시선으로부터,』 하와이 에디션
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_09.jpg" alt="호수의 일">
+								<div class="text-inner">
+									<h3 class="book-title">호수의 일</h3>
+									<h4 class="desc">
+										얼어붙은 사춘기, 끝내 맞이하는 성장과 치유 <br>
+										『아몬드』 『유원』을 잇는 눈부신 성장소설</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_10.jpg" alt="쇼코의 미소">
+								<div class="text-inner">
+									<h3 class="book-title">쇼코의 미소</h3>
+									<h4 class="desc">
+										제 5회 젊은작가상 수상작 <br>
+
+									</h4>
+								</div>
+							</a>
+						</div>
+
+						<div id="menu-bg-in" class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_11.jpg" alt="작가들의 비밀스러운 삶">
+								<div class="text-inner">
+									<h3 class="book-title">작가들의 비밀스러운 삶</h3>
+									<h4 class="desc">
+										미궁에 빠진 살인사건과 섬에 칩거하는 작가의 비밀은?
+									</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_12.jpg" alt="테라피스트">
+								<div class="text-inner">
+									<h3 class="book-title">테라피스트</h3>
+									<h4 class="desc">
+										전 세계 수백만 독자가 열광하는 심리 스릴러 여왕 <br>
+										B. A. 패리스가 강렬한 최신작으로 화려하게 귀환했다!</h4>
+								</div>
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/goods_13.jpg" alt="오늘 밤, 세계에서 이 사랑이 사라진다 해도">
+								<div class="text-inner">
+									<h3 class="book-title">오늘 밤, 세계에서 이 사랑이 사라진다 해도</h3>
+									<h4 class="desc">
+
+										제26회 전격소설대상 ‘미디어워크스문고상’ 수상작
+									</h4>
+								</div>
+							</a>
+						</div>
+
+					</ul>
+				</li>
+				<li class="menu-item company"><a href="#">회사소개</a>
+					<ul class="depth-contain">
+						<li class="depth-item">
+							<ul class="depth-01">
+								<li class="menu-item"><a href="brand.html">문학동네 출판그룹</a></li>
+								<li class="menu-item"><a href="#">문학동네가 걸어온 길</a></li>
+								<li class="menu-item"><a href="#">찾아오시는 길</a></li>
+								<li class="menu-item"><a href="#">제휴 문의</a></li>
+							</ul>
+						</li>
+						<div class="pic-contain">
+							<!--<div class="pic-inner">
+							<img src="./img/goods_14.jpg" alt="photo">
+						</div>-->
+						</div>
+					</ul>
+
+
+				</li>
+				<li class="menu-item book-club"><a href="#">북클럽</a>
+					<ul class="depth-contain">
+						<li class="depth-item">
+							<ul class="depth-01">
+								<li class="menu-item"><a href="#">북클럽 문학동네</a></li>
+								<li class="menu-item"><a href="#">북클럽 가입안내</a></li>
+								<li class="menu-item"><a href="#">뉴스레터</a></li>
+								<li class="menu-item"><a href="#">SHOP</a></li>
+								<li class="menu-item"><a href="#">FAQ</a></li>
+								<li class="menu-item"><a href="#">공지사항</a></li>
+							</ul>
+						</li>
+						<div class="pic-contain">
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-01.jpg" alt="문학동네">
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-02.jpg" alt="문학동네 북클럽 5기 모집">
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-03.jpg" alt="문학동네 맴버십 가입안내">
+							</a>
+							<a href="#" class="pic-inner">
+								<img src="./img/bookclub-menu-04.jpg" alt="북클럽샵">
+							</a>
+						</div>
+					</ul>
+				</li>
+				<!--<li class="menu-item support ano-type"><a href="#">고객지원</a>
+				<ul class="depth-contain">
+					<li class="depth-item">
+						<ul class="depth-01">
+							<li class="menu-item"><a href="qna.html">자주묻는 질문</a></li>
+							<li class="menu-item"><a href="#">공지사항</a></li>
+							<li class="menu-item"><a href="#">문학동네 공모전</a></li>
+							<li class="menu-item"><a href="#">투고문의</a></li>
+							<li class="menu-item"><a href="#">2차 저작권 이용 안내</a></li>
+							<li class="menu-item"><a href="#">자료실</a></li>
+						</ul>
+					</li>
+					<a href="#" class="contain">
+						<div>
+							<p>
+								채용안내 <br>
+								<span>문학동네에서 출판의 미래를 열어갈 인재 여러분을 기다립니다</span>
+							</p>
+							<p class="more"><span>자세히보기</span></p>
+						</div>
+					</a>
+				</ul>
+
+			</li>-->
+				<li class="menu-item about ano-type left-el"><a href="#">고객지원</a>
+					<ul class="depth-contain">
+						<li id="menu-supprot-bg" class="bg-contain active"></li>
+						<li id="menu-about-bg" class="bg-contain"></li>
+						<li class="depth-item" rel="menu-supprot-bg">Support
+							<ul class="depth-01">
+								<li class="menu-item"><a href="qna.html">자주묻는 질문</a></li>
+								<li class="menu-item"><a href="#">공지사항</a></li>
+								<li class="menu-item"><a href="#">문학동네 공모전</a></li>
+								<li class="menu-item"><a href="#">투고문의</a></li>
+								<li class="menu-item"><a href="#">2차 저작권 이용 안내</a></li>
+								<li class="menu-item"><a href="#">자료실</a></li>
+							</ul>
+						</li>
+						<li class="depth-item" rel="menu-about-bg">About Us
+							<ul class="depth-01">
+								<li class="menu-item"><a href="#">동네 책방</a></li>
+								<li class="menu-item"><a href="#">작가와의 만남</a></li>
+								<li class="menu-item"><a href="#">문학동네 북캐스트</a></li>
+								<li class="menu-item"><a href="#">카페콤마</a></li>
+								<li class="menu-item"><a href="#">완독 챌린지, 독파</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="sup-menu">
+				<li class="menu-item"><span id="searchBtn" class="material-icons-outlined">
+						search
+					</span></li>
+				<li class="menu-item">
+					<a href="#">
+						<span class="material-icons-outlined">
+							shopping_cart
+						</span>
+					</a>
+				</li>
+				<li class="menu-item"><a href="#"><span class="material-icons-outlined">
+							person_outline
+						</span></a></li>
+			</ul>
+		</div>
+	</nav>
+	<section class="search-item" id="searchBar">
+		<form action="">
+			<!-- 검색창 start -->
+			<input id="searchItem" type="search" placeholder="검색어를 입력하여 주세요">
+			<input type="submit" id="search-submit-btn">
+			<label for="search-submit-btn">
+				<span class="material-icons-outlined">
+					search
+				</span>
+			</label>
+			<ul class="tags" id="Tags">
+				<li class="tag-item">에세이</li>
+				<li class="tag-item">한국소설</li>
+				<li class="tag-item">인문학</li>
+				<li class="tag-item">심리학</li>
+				<li class="tag-item">여행</li>
+			</ul>
+		</form>
+		<div class="close-btn" id="closeBtn">
+			<span class="material-icons-outlined">
+				close
+			</span>
+		</div>
+	</section>
+	<!-- 검색창 end  -->
+
+	<!-- 글로벌네비 end -->
+	<!-- 책 리스트 영역 start-->
+	<section class="main-item">
+		<!-- 하위 카테고리 영역 start -->
+		<section class="book-nav">
+			<article class="search-item">
+				<form action="">
+					<input type="search" placeholder="검색어를 입력하여 주세요." id="search" />
+					<label for="search">
+						<img class="search-item" src="./img/icon/search_01.png" alt="검색" />
+					</label>
+				</form>
+			</article>
+			<article class="nav-ops">
+				<ul class="category">
+					<li><a href="">에세이</a></li>
+					<li><a href="">국내소설</a></li>
+					<li><a href="">해외소설</a></li>
+					<li><a href="">인문학</a></li>
+					<li><a href="">자연과학</a></li>
+					<li><a href="">청소년</a></li>
+					<li><a href="">경제경영</a></li>
+					<li><a href="">예술</a></li>
+					<li><a href="">여행/실용/요리</a></li>
+					<li><a href="">시리즈/전집</a></li>
+				</ul>
+			</article>
+		</section>
+		<!-- 하위 카테고리 영역 end -->
+		<article class="btns">
+			<img class="list" src="./img/icon/list.png" alt="리스트 보기" />
+			<img class="card" src="./img/icon/menu.png" alt="카드 보기" />
+		</article>
+
+		<article class="book-img_contain">
+			<p class="item-contain">
+				<a href="product.html"><img src="./img/book/xl8.jpg" alt="거꾸로 보는 세상에 내가 있었다" /></a>
+			</p>
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl9.jpg" alt="걷다 보니 내가 좋아지기 시작했다" /></a>
+			</p>
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl10.jpg" alt="유일한 평범" /></a>
+			</p>
+		</article>
+		<!-- 1 col -->
+		<article class="info_contain">
+			<div class="info-item">
+				<h3 class="title">
+					<a href="product.html">거꾸로 보는 세상에 내가 있었다</a>
+				</h3>
+				<p class="writer">신규상</p>
+				<h2 class="price">14,850</h2>
+				<p class="add">
+					<span class="sell">1.962</span>
+					<span class="review">13</span>
+					<span class="point">9.9</span>
+				</p>
+			</div>
+
+			<div class="info-item">
+				<h3 class="title">
+					<a href="#">걷다 보니 내가 좋아지기 시작했다</a>
+				</h3>
+				<p class="writer">이승민</p>
+				<h2 class="price">12,600</h2>
+				<p class="add">
+					<span class="sell">2.532</span>
+					<span class="review">4</span>
+					<span class="point">9.6</span>
+				</p>
+			</div>
+
+			<div class="info-item">
+				<h3 class="title"><a href="#">유일한 평범</a></h3>
+				<p class="writer">최현정</p>
+				<h2 class="price">14,400</h2>
+				<p class="add">
+					<span class="sell">2.832</span>
+					<span class="review">9</span>
+					<span class="point">9.6</span>
+				</p>
+			</div>
+		</article>
+
+		<!-- 2 col -->
+
+		<article class="book-img_contain">
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl11.jpg" alt="나는 예민한 엄마입니다" /></a>
+			</p>
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl12.jpg" alt="나를 부르는 숲" /></a>
+			</p>
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl13.jpg" alt="내가 확실히 아는 것들" /></a>
+			</p>
+		</article>
+
+		<article class="info_contain">
+			<div class="info-item">
+				<h3 class="title"><a href="#">나는 예민한 엄마입니다</a></h3>
+				<p class="writer">송희재</p>
+				<h2 class="price">15,120</h2>
+				<p class="add">
+					<span class="sell">13,092</span>
+					<span class="review">18</span>
+					<span class="point">9.9</span>
+				</p>
+			</div>
+			<div class="info-item">
+				<h3 class="title"><a href="#">나를 부르는 숲</a></h3>
+				<p class="writer">빌 브라이슨</p>
+				<h2 class="price">12,150</h2>
+				<p class="add">
+					<span class="sell">21.342</span>
+					<span class="review">29</span>
+					<span class="point">9.4</span>
+				</p>
+			</div>
+			<div class="info-item">
+				<h3 class="title"><a href="#">내가 확실히 아는 것들</a></h3>
+				<p class="writer">오프라 윈프리</p>
+				<h2 class="price">12,420</h2>
+				<p class="add">
+					<span class="sell">17.862</span>
+					<span class="review">89</span>
+					<span class="point">9.1</span>
+				</p>
+			</div>
+		</article>
+
+		<article class="book-img_contain">
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl14.jpg" alt="네가 번개를 맞으면 나는 개미가 될거야" /></a>
+			</p>
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl15.jpg" alt="마을 버스 세계를 가다" /></a>
+			</p>
+			<p class="item-contain">
+				<a href="#"><img src="./img/book/xl17.jpg" alt="살고 싶다는 농담" /></a>
+			</p>
+		</article>
+		<!--3 col -->
+		<article class="info_contain">
+			<div class="info-item">
+				<h3 class="title">
+					<a href="#">네가 번개를 맞으면 나는 개미가 될거야</a>
+				</h3>
+				<p class="writer">장하은</p>
+				<h2 class="price">14,400</h2>
+				<p class="add">
+					<span class="sell">9,381</span>
+					<span class="review">7</span>
+					<span class="point">10</span>
+				</p>
+			</div>
+			<div class="info-item">
+				<h3 class="title"><a href="#">마을 버스 세계를 가다</a></h3>
+				<p class="writer">임택</p>
+				<h2 class="price">13,500</h2>
+				<p class="add">
+					<span class="sell">9.228</span>
+					<span class="review">4</span>
+					<span class="point">8.4</span>
+				</p>
+			</div>
+			<div class="info-item">
+				<h3 class="title"><a href="#">살고 싶다는 농담</a></h3>
+				<p class="writer">허지웅</p>
+				<h2 class="price">14,400</h2>
+				<p class="add">
+					<span class="sell">22.845</span>
+					<span class="review">179</span>
+					<span class="point">9.6</span>
+				</p>
+			</div>
+		</article>
+	</section>
+	<!-- 책 리스트 영역 end-->
+	<!--푸터 start-->
+	<footer>
+		<section class="section_top">
+			<p class="menu-item">
+				<a href="javascript:void[0]">개인정보 처리방침</a>
+				<a href="javascript:void[0]">이용약관</a>
+				<a href="javascript:void[0]">제휴문의</a>
+				<a href="javascript:void[0]">찾아오시는 길</a>
+				<a href="javascript:void[0]">채용안내</a>
+				<a href="javascript:void[0]">전화번호 안내</a>
+			</p>
+		</section>
+
+		<div class="footer-family">
+			<input type="checkbox" id="family-site_btn" />
+			<label class="family-site" for="family-site_btn">
+				패밀리 사이트 <img src="./img/icon/arrow-b.png" alt="arrow" />
+			</label>
+			<ul class="sites">
+				<li><a href="#">문학동네</a></li>
+				<li><a href="#">고유서가</a></li>
+				<li><a href="#">글항아리</a></li>
+				<li><a href="#">나무의마음</a></li>
+				<li><a href="#">난다</a></li>
+				<li><a href="#">달</a></li>
+				<li><a href="#">루페</a></li>
+				<li><a href="#">벨라루나</a></li>
+				<li><a href="#">싱긋</a></li>
+				<li><a href="#">아우름</a></li>
+				<li><a href="#">아템포</a></li>
+				<li><a href="#">아트북스</a></li>
+				<li><a href="#">애니북스</a></li>
+				<li><a href="#">앨리스</a></li>
+				<li><a href="#">에쎄</a></li>
+				<li><a href="#">엘릭시르</a></li>
+				<li><a href="#">오우아</a></li>
+				<li><a href="#">이봄</a></li>
+				<li><a href="#">이봄</a></li>
+				<li><a href="#">이콘</a></li>
+				<li><a href="#">차이</a></li>
+				<li><a href="#">콜라주</a></li>
+				<li><a href="#">테이스트북스</a></li>
+				<li><a href="#">톨</a></li>
+				<li><a href="#">포레</a></li>
+			</ul>
+		</div>
+
+		<section class="section_bottom">
+			<div class="company-info">
+				<h2>고객센터 : 031-955-8888</h2>
+				(주)문학동네<br />
+				10881 경기도 파주시 회동길 210<br />
+				사업자번호 208-81-24906<br />
+				대표자 : 김소영<br />
+				이메일 : editor@munhak.com<br />
+				대표 이메일 : web@munhak.com<br />
+				COPYRIGHT 2019 (주) MUNHAKDONGNE Crop
+			</div>
+
+			<div class="sns-ico">
+				<a href="javascript:void[0]"><img src="./img/icon/facebook.png" alt="" /></a>
+				<a href="javascript:void[0]"><img src="./img/icon/youtube.png" alt="" /></a>
+				<a href="javascript:void[0]"><img src="./img/icon/instagram.png" alt="" /></a>
+				<a href="javascript:void[0]"><img src="./img/icon/twitter.png" alt="" /></a>
+			</div>
+		</section>
+	</footer>
+	<!--푸터 end-->
+</body>
+
+</html>

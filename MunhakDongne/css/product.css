@@ -1,0 +1,449 @@
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif; */
+/* common start */
+html {
+  font-size: 16px;
+  color: #333;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+ul li {
+  list-style: none;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+/*상품판매 배너 start*/
+.product_banner {
+  width: 60%;
+  margin: 200px auto 80px;
+  overflow: hidden;
+}
+.product_banner .goods_inner {
+  float: left;
+  width: 45%;
+  margin-right:5%;
+  text-align: left;
+  padding: 2rem 0;
+}
+.product_banner .goods_inner img {
+  width: 100%;
+  box-shadow: 5px 5px 5px #999;
+}
+.product_banner .sale_contain {
+  float: left;
+  width: 45%;
+  padding: 2rem 0;
+}
+.product_banner .sale_contain .book-info {
+  width: 100%;
+}
+.product_banner .sale_contain .book-info .book-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.product_banner .sale_contain .book-info .info {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+.product_banner .sale_contain .book-info .info * {
+  position: relative;
+  margin-right: 1.25rem;
+}
+.product_banner .sale_contain .book-info .info *:after {
+  content: "|";
+  position: absolute;
+  right: -1.25rem;
+  top: 0;
+  color: #999;
+  padding-right: 2px;
+}
+.product_banner .sale_contain .book-info .info *:last-child:after {
+  display: none;
+}
+
+.product_banner .sale_contain .book-info .additional {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+.product_banner .sale_contain .book-info .additional .point {
+  font-size: 1rem;
+  color: #196ab3;
+  margin-right: 0.375rem;
+}
+.product_banner .sale_contain .book-info .additional .point:before {
+  content: "평점";
+  font-size: 0.7rem;
+  margin-right: 2px;
+  color: #666;
+}
+.product_banner .sale_contain .book-info .additional .review {
+  color: #196ab3;
+  margin-right: 0.375rem;
+}
+.product_banner .sale_contain .book-info .additional .review:before {
+  content: "회원리뷰 (";
+  font-size: 0.7rem;
+  color: #666;
+}
+.product_banner .sale_contain .book-info .additional .review:after {
+  content: "건)";
+  font-size: 0.7rem;
+  color: #666;
+}
+.product_banner .sale_contain .book-info .additional .sale-index {
+  color: red;
+}
+.product_banner .sale_contain .book-info .additional .sale-index:before {
+  content: "판매지수";
+  font-size: 0.7rem;
+  color: #666;
+}
+.product_banner .sale_contain .sale-info {
+  border-top: 1px solid rgb(220, 220, 220);
+  padding: 2rem 0;
+}
+
+.product_banner .sale_contain .sale-info table th,
+.product_banner .sale_contain .sale-info table td {
+  line-height: 2.5rem;
+  vertical-align: top;
+  font-size: 0.8rem;
+}
+.product_banner .sale_contain .sale-info table tbody tr th {
+  /*width:30%;*/
+  text-align: left;
+  font-weight: 400;
+}
+.product_banner .sale_contain .sale-info table tbody tr:nth-child(2) th {
+  font-weight: bold;
+}
+.product_banner .sale_contain .sale-info table tbody tr:nth-child(2) td {
+  font-size: 1.1rem;
+  color: red;
+}
+.product_banner .sale_contain .sale-info table tbody tr td {
+  /*width:70%;*/
+  padding: 0 1.5rem;
+}
+.product_banner .sale_contain .sale-info table tbody tr ul li:first-child:after {
+  content: "(5% 적립)";
+  margin-left: 0.25rem;
+}
+.product_banner .sale_contain .del-info {
+  border-top: 1px solid rgb(220, 220, 220);
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: 2rem 0;
+}
+
+.product_banner .sale_contain .del-info table tbody tr th,
+.product_banner .sale_contain .del-info table tbody tr td {
+  line-height: 2.5rem;
+  vertical-align: top;
+  font-size: 0.8rem;
+}
+.product_banner .sale_contain .del-info table tbody tr th {
+  text-align: left;
+  font-weight: 400;
+}
+.product_banner .sale_contain .del-info table tbody tr td {
+  padding: 0 1.5rem;
+}
+.product_banner .sale_contain .del-info table tbody tr td ul li:first-child {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.product_banner .sale_contain .del-info table tbody tr td ul li:nth-child(2) {
+  color: #999;
+}
+.product_banner .sale_contain .btns {
+  padding: 2rem 0 0;
+  overflow: hidden;
+}
+.product_banner .sale_contain .btns .btn {
+  display: block;
+  width: 180px;
+  line-height: 52px;
+  float: left;
+  margin-right: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+}
+.product_banner .sale_contain .btns .btn.dish {
+  background-color: #57aec4;
+}
+.product_banner .sale_contain .btns .btn.buy {
+  background-color: #196ab3;
+  margin-right: 0;
+}
+/*상품판매 배너 end*/
+
+/*상품 상세정보 start*/
+
+.product-intro article input[type="radio"] {
+  display: none;
+}
+
+.product-intro {
+  width: 100%;
+  margin-bottom: 120px;
+}
+.product-intro .menu-contain {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/*.product-intro .menu-contain .btns{
+    overflow:hidden;
+    border:1px solid #333;
+  }
+  .product-intro .menu-contain label{
+    display:block;
+    width:20%;
+    line-height:3.25rem;
+    background-color: rgb(245,245,245);
+    text-align: center;
+    font-weight: bold;
+    border-bottom:1px solid #333;
+  }
+  .product-intro .menu-contain label:last-child{
+    border:none;
+  }*/
+.product-intro .menu-contain .btns {
+  position: fixed;
+  bottom: 30%;
+  right: 20px;
+  border: 1px solid #333;
+  z-index: 99;
+}
+.product-intro .menu-contain .btns .btn {
+  display: block;
+  width: 10rem;
+  line-height: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #333;
+  transition: .3s;
+}
+.product-intro .menu-contain .btns .btn:hover{
+  background-color:#1d2d7b;
+  color:#fff;
+}
+.product-intro .menu-contain .btns .btn:last-child {
+  border: none;
+}
+
+.product-intro .menu-contain input:checked + label {
+  background-color: #333;
+  color: #fff;
+}
+.product-intro .disc-contain {
+  clear: both;
+}
+
+/*도서 구매사이트 start*/
+
+.product-intro .disc-contain .disc-item .store-links .title {
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+.product-intro .disc-contain .disc-item .store-links a {
+  margin-right: 6%;
+}
+.product-intro .disc-contain .disc-item .store-links a img {
+  height: 60px;
+  padding: 14px 0;
+}
+
+/*도서 구매사이트 end*/
+
+/*품목정보 start*/
+.product-intro .disc-contain .disc-item .book-info table {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.product-intro .disc-contain .disc-item .book-info table caption {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.product-intro .disc-contain .disc-item .book-info table tbody th,
+.product-intro .disc-contain .disc-item .book-info table tbody td {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 1rem;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.product-intro .disc-contain .disc-item .book-info table tbody th {
+  width: 25%;
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  font-size: 0.9rem;
+}
+.product-intro .disc-contain .disc-item .book-info table tbody td {
+  width: 75%;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+/*품목정보 end*/
+
+/*관련태그 영역 start*/
+.product-intro .disc-contain .disc-item .book-info .rel-tag_inner .title {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+}
+.product-intro .disc-contain .disc-item .book-info .rel-tag_inner ul {
+  width: 100%;
+}
+.product-intro .disc-contain .disc-item .book-info .rel-tag_inner ul .tag {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background-color: rgb(240, 240, 240);
+  border-radius: 0.5rem;
+  color: #333;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+.product-intro .disc-contain .disc-item .book-info .rel-tag_inner ul .tag:last-child {
+  margin-right: 0;
+}
+/*관련태그 영역 end*/
+
+.product-intro .disc-contain li {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.product-intro .disc-contain li:last-child {
+  border-bottom: none;
+}
+.product-intro .disc-contain .book-intro .title,
+.product-intro .disc-contain .table-contents .title {
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.product-intro .disc-contain .book-intro {
+  line-height: 1.8;
+}
+.product-intro .disc-contain .book-intro .keyword {
+  font-weight: bold;
+}
+.product-intro .disc-contain .book-intro .plot {
+  text-align: justify;
+}
+.product-intro .disc-contain .table-contents {
+  border: none;
+}
+.product-intro .disc-contain .table-contents p {
+  text-align: justify;
+  line-height: 1.6;
+}
+/*.product-intro .disc-contain .table-contents p b{
+  }*/
+
+/*리뷰/한줄평 start*/
+.product-intro .menu-contain .disc-contain .disc-item#review-sec {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(250, 250, 250);
+}
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .disc,
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .point,
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .content {
+  text-align: center;
+}
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .point {
+  color: #196ab3;
+  font-size: 32px;
+}
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .point .star {
+  font-size: 32px;
+}
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .point .add {
+  color: #333;
+  font-weight: bold;
+  font-size: 42px;
+}
+.product-intro .menu-contain .disc-contain .disc-item#review-sec .point .max-point {
+  color: #999;
+}
+/*리뷰/한줄평 end*/
+
+/*배송/반품/교환 안내 start*/
+
+.product-intro .menu-contain .disc-contain .disc-item#delivery-sec .banner-title {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.product-intro .menu-contain .disc-contain .disc-item#delivery-sec .table-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.product-intro .menu-contain .disc-contain .disc-item#delivery-sec table {
+  margin-bottom: 2rem;
+}
+
+.product-intro .menu-contain .disc-contain .disc-item table tbody tr th,
+.product-intro .menu-contain .disc-contain .disc-item table tbody tr td {
+  border: 1px solid rgb(200, 200, 200);
+  padding: 1rem;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.product-intro .menu-contain .disc-contain .disc-item table {
+  width: 100%;
+}
+.product-intro .menu-contain .disc-contain .disc-item table tbody tr th {
+  width: 25%;
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.product-intro .menu-contain .disc-contain .disc-item table tbody tr td {
+  width: 75%;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.product-intro .menu-contain .disc-contain .disc-item table tbody tr td ul li {
+  font-size: 0.8rem;
+  border-bottom: none;
+  padding: 0.4rem 0;
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+/*배송/반품/교환 안내 end*/
+/*상품 상세정보 end*/

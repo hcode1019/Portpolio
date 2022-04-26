@@ -1,0 +1,258 @@
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif; */
+
+/* common start */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  background-color: rgb(245, 245, 245);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+ul li {
+  list-style: none;
+}
+form {
+  font-size: 0;
+}
+
+/* 책 리스트 영역 start */
+.main-item {
+  width: 70%;
+  margin: 124px auto 120px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+/* 하위 카테고리 영역 start */
+.book-nav {
+}
+.book-nav .search-item {
+  padding: 3rem 20%;
+  background-color: #fff;
+}
+.book-nav .search-item form {
+  position: relative;
+}
+.book-nav .search-item input[type="search"] {
+  outline: none;
+  border: 2px solid #203697;
+  width: 100%;
+  height: 2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.book-nav .search-item label {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  vertical-align: middle;
+  height: 28px;
+  width: 28px;
+}
+.book-nav .search-item label img {
+  width: 100%;
+  padding: 0;
+  background-color: transparent;
+}
+
+.book-nav .nav-ops {
+  width: 100%;
+  background-color: rgb(240, 240, 245);
+  padding: 1rem 0;
+}
+.book-nav .nav-ops .category {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.book-nav .nav-ops .category li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  line-height: 3rem;
+}
+.book-nav .nav-ops .category li:first-child a {
+  color: #203697;
+  font-weight: bold;
+}
+.book-nav .nav-ops .category li a {
+  display: inline-block;
+  padding: 2px 12px 4px;
+  font-size: 0.9rem;
+  color: #333;
+}
+.book-nav .nav-ops .category li a:hover {
+  font-weight: bold;
+}
+/* 하위 카테고리 영역 end */
+
+/* 보기 옵션버튼 start */
+
+.btns {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+.btns img {
+  display: block;
+  position: absolute;
+}
+.btns img:hover {
+  cursor: pointer;
+}
+.btns img.list {
+  width: 32px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 74px;
+  padding: 4px;
+}
+.btns img.card {
+  width: 32px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 30px;
+  padding: 6px;
+}
+
+/* 보기 옵션버튼 end */
+
+.book-img_contain {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.book-img_contain .item-contain {
+  width: 30.666%;
+  margin-right: 2%;
+  float: left;
+  text-align: center;
+}
+.book-img_contain .item-contain:last-child {
+  margin-right: 4%;
+}
+.book-img_contain .item-contain img {
+  width: 50%;
+  border: 1px solid #999;
+}
+
+.info_contain {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.info_contain .info-item {
+  width: 30.666%;
+  margin-right: 2%;
+  text-align: center;
+  float: left;
+}
+.info_contain .info-item:last-child {
+  margin-right: 4%;
+}
+.info_contain .info-item .title {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+.info_contain .info-item .title a {
+  display: inline-block;
+  padding: 0.25rem 2rem;
+  margin: 0 auto;
+}
+.info_contain .info-item .writer {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+.info_contain .info-item .writer::after {
+  content: "저";
+  color: #666;
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+.info_contain .info-item .price {
+  font-size: 1.2rem;
+  color: #333;
+}
+.info_contain .info-item .price:after {
+  content: "원";
+  color: #333;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+}
+.info_contain .info-item .add {
+  font-size: 0.9rem;
+  color: #333;
+}
+.info_contain .info-item .add > * {
+  margin-right: 4px;
+  line-height: 2;
+}
+.info_contain .info-item .add > *:last-child {
+  margin: 0;
+}
+.info_contain .info-item .add .sell {
+  color: red;
+}
+.info_contain .info-item .add .sell::before {
+  content: "판매지수";
+  color: #666;
+  font-size: 0.75rem;
+  margin-right: 4px;
+}
+.info_contain .info-item .add .review {
+  color: #203697;
+  font-weight: 700;
+}
+.info_contain .info-item .add .review::before {
+  content: "회원리뷰";
+  color: #666;
+  font-size: 0.75rem;
+  margin-right: 4px;
+  font-weight: 400;
+}
+.info_contain .info-item .add .review::after {
+  content: "건";
+  color: #203697;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.info_contain .info-item .add .point {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.info_contain .info-item .add .point::before {
+  content: "평점";
+  color: #666;
+  font-size: 0.75rem;
+  margin-right: 4px;
+  font-weight: 400;
+}
+/* 책 리스트 영역 end */

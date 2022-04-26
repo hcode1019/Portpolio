@@ -1,0 +1,329 @@
+/* common start */
+html {
+  font-size: 16px;
+  color: #333;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif; */
+body {
+  overflow-y: scroll;
+}
+/* common end */
+label:hover {
+  cursor: pointer;
+}
+#wrap {
+  width: 40%;
+  margin: 200px auto 120px;
+  overflow: hidden;
+}
+#wrap .btns {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 80px;
+}
+#wrap .step-02 .btns {
+  width: 60%;
+  margin: 0 auto 80px;
+}
+#wrap .btns .btn {
+  display: block;
+  width: 49%;
+  float: left;
+  text-align: center;
+  line-height: 3.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+#wrap .btns .cancel-btn {
+  margin-right: 2%;
+  background-color: rgb(230, 230, 230);
+  color: #333;
+}
+#wrap .btns .next-btn {
+  background-color: #203697;
+  color: #fff;
+}
+
+.step {
+  margin-top: 120px;
+  display: none;
+}
+#wrap > input[id="consent"]:checked ~ .step-01 {
+  display: block;
+}
+#wrap > input[id="infomation"]:checked ~ .step-02 {
+  display: block;
+}
+#wrap > input[id="certified"]:checked ~ .step-03 {
+  display: block;
+}
+#wrap > input[id="compelete"]:checked ~ .step-04 {
+  display: block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+label[for="consent"],
+label[for="infomation"],
+label[for="certified"],
+label[for="compelete"] {
+  display: block;
+  width: 25%;
+  float: left;
+  background-color: transparent;
+  color: #333;
+  font-weight: bold;
+  line-height: 52px;
+  text-align: center;
+}
+#wrap > input[type="radio"]:checked + label {
+  color: #fff;
+  background-color: #203697;
+}
+/* 약관동의 start */
+.step-01 input[type="checkbox"] {
+  display: none;
+}
+.step-01 .agrees-contain {
+  margin-bottom: 42px;
+}
+.step-01 label[for="agrees"] {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 700;
+}
+.step-01 label[for="agrees"] p {
+  padding-left: 32px;
+  position: relative;
+  text-decoration: underline;
+  line-height: 1.4;
+}
+.step-01 label[for="agrees"] p:before {
+  content: "";
+  display: inline-block;
+  background: url(../img/icon/check-border.png) no-repeat;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  margin-right: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.step-01 .agrees-contain input[type="checkbox"]:checked + label p:before {
+  background-image: url(../img/icon/checked-border.png);
+}
+.step-01 .information {
+  margin-bottom: 40px;
+}
+.step-01 .information .box {
+  overflow: auto;
+  height: 200px;
+  margin-top: 20px;
+}
+.step-01 .information .box p {
+  font-size: 0.75em;
+  line-height: 1.4;
+  text-align: left;
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  color: #333;
+}
+.step-01 .information label {
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 32px;
+  position: relative;
+}
+.step-01 .information label:before {
+  content: "";
+  display: inline-block;
+  background: url(../img/icon/check-border.png) no-repeat;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.step-01 .information input[type="checkbox"]:checked + label:before {
+  background-image: url(../img/icon/checked-border.png);
+}
+.step-01 .information label[for="info"]::after,
+.step-01 .information label[for="clause"]:after {
+  content: "(필수)";
+  color: #203697;
+  font-size: 0.8rem;
+  margin-left: 6px;
+  font-weight: 400;
+}
+.step-01 .information label[for="position"]:after,
+.step-01 .information label[for="promotion"]:after {
+  content: "(선택)";
+  color: #999;
+  font-size: 0.8rem;
+  margin-left: 6px;
+  font-weight: 400;
+}
+/* 약관 동의 end */
+
+/* 개인정보 입력 start */
+
+.step-02 form {
+  width: 60%;
+  margin: 0 auto;
+  color: #333;
+}
+.step-02 form fieldset {
+  border: none;
+  margin-bottom: 40px;
+}
+.step-02 form fieldset legend {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.step-02 form fieldset input {
+  line-height: 1.2rem;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  padding: 14px 10px;
+  border-radius: 0;
+  border: 1px solid rgb(210, 210, 210);
+}
+.step-02 form fieldset select {
+  border: 1px solid rgb(210, 210, 210);
+}
+
+.step-02 form .birth_code {
+  overflow: hidden;
+}
+.step-02 form .birth_code input {
+  width: 32%;
+  float: left;
+}
+.step-02 form .birth_code #mm {
+  line-height: 1.2rem;
+  font-size: 1rem;
+  padding: 14px 10px;
+  width: 32%;
+  margin: 0 2%;
+  float: left;
+}
+.step-02 form .gender_code #gender {
+  width: 100%;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  padding: 14px 10px;
+}
+.step-02 form .email_code legend:after {
+  content: "(선택)";
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+/* 개인정보 입력 end */
+
+/* 본인확인  start */
+.step-03 article {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.step-03 article label {
+  display: block;
+  width: 40%;
+  margin-right: 60%;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.step-03 article input {
+  width: 70%;
+  margin-right: 2%;
+  float: left;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  padding: 14px 10px;
+  border: 1px solid rgb(210, 210, 210);
+  margin-bottom: 20px;
+}
+.step-03 article .btn {
+  display: block;
+  width: 28%;
+  float: left;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  padding: 14px 10px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #203697;
+  text-align: center;
+}
+.step-03 article .btn.join {
+  width: 100%;
+}
+
+.step-03 article input[type="number"] {
+  width: 100%;
+}
+/* 본인확인  end */
+.step-04 article img {
+  display: block;
+  width: 15%;
+  margin: 10rem auto 4rem;
+}
+.step-04 article h3 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.step-04 article p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 2.4rem;
+}
+.step-04 article .btn {
+  display: block;
+  padding: 0.8rem 0;
+  width: 240px;
+  background-color: #203697;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  border-radius: 5px;
+}

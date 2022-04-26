@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+ul li {
+  list-style: none;
+}
+
+.questions-inner {
+  width: 50%;
+  margin: 200px auto 120px;
+}
+
+.questions-inner .title {
+
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.questions-inner .desc{
+  width:100%;
+  margin-bottom:5%;
+  line-height:1.6;
+}
+.questions-inner .q-list{
+  width:100%;
+}
+.questions-inner .q-list li {
+  margin-bottom: 2rem;
+}
+.questions-inner .q-list li label h3 {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 1rem;
+  color: #333;
+  line-height: 3.2rem;
+  position: relative;
+}
+.questions-inner .q-list li label h3 .arrow-btn {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  right: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  /*border: 1px solid #666;
+  border-radius: 50%;*/
+}
+.questions-inner .q-list li label h3 .arrow-btn > span{
+  display:block;
+  line-height:24px;
+  text-align: center;
+  color:#999;
+  transform: rotate(90deg);
+}
+.questions-inner .q-list li article {
+  text-align: justify;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+.questions-inner .q-list li article p {
+  padding: 1rem;
+  line-height: 1.8;
+  color: #333;
+  font-size: 14px;
+}
+.questions-inner .q-list li input[type="checkbox"]:checked ~ article {
+  height: 100px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.questions-inner .q-list li input[type="checkbox"]:checked ~ label h3 .arrow-btn > span {
+  transform: rotate(-90deg);
+}
+.questions-inner .kind-contain{
+  width:100%;
+  overflow:hidden;
+  margin-bottom:6rem;
+  border-top:3px solid rgb(54, 54, 163);
+  padding-top:1rem;
+}
+
+.questions-inner .kind-contain > li{
+  width:18%;
+  margin-right:2%;
+  float:left;
+  text-align: center;
+  font-weight:bold;
+  line-height:2.4;
+  border:1px solid transparent;
+  border-radius: 40px;
+  font-size:1.2rem;
+}
+.questions-inner .kind-contain > li.selected{
+  background-color: rgb(54, 54, 163);
+  color:#fff;
+}
+.questions-inner .kind-contain > li:last-child{
+  margin-right:0;
+}
+.questions-inner .kind-contain > li:hover{
+  font-weight: bold;
+}
+
+.questions-inner .search-el{
+  width:100%;
+  background-color: rgb(245, 245, 245);
+  padding:5% 0;
+  margin:0 0 5%;
+
+}
+
+.questions-inner .search-el .contain{
+  width:60%;
+  margin:0 auto;
+  overflow:hidden;
+}
+.questions-inner .search-el input[type=search]{
+  width:72%;
+  float:left;
+  margin-right:3%;
+  height:3rem;
+  border:1px solid #999;
+  padding:0 1rem;
+}
+.questions-inner .search-el input[type=submit]{
+  width:20%;
+  float:left;
+  font-size:1rem;
+  height:3rem;
+  font-weight:bold;
+}

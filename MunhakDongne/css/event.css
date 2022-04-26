@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section.main-visual {
+  width: 60%;
+  margin: 200px auto 120px;
+}
+section.main-visual article {
+  text-align: center;
+  width: 100%;
+}
+section.main-visual article img {
+  width: 100%;
+  border: 1px solid #666;
+}

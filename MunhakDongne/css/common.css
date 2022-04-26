@@ -1,0 +1,732 @@
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif; */
+
+html {
+  font-size: 16px;
+  color: #333;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+ul li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* common end */
+
+/* 글로벌네비 start */
+nav {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  border-bottom: 1px solid #e5e5e5;
+}
+nav .sub-menu {
+  width: 100%;
+  padding: 0 10%;
+  line-height: 42px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+}
+nav .sub-menu .sub-menu-contain {
+  float: right;
+  overflow: hidden;
+}
+nav .sub-menu .login-inner,
+nav .sub-menu .signup-inner,
+nav .sub-menu .sns-list {
+  float: left;
+}
+nav .sub-menu .login-inner {
+  margin-right: 1.4rem;
+  font-weight: 700;
+}
+nav .sub-menu .signup-inner {
+  margin-right: 2.8rem;
+  font-weight: 700;
+}
+nav .sub-menu .login-inner a,
+nav .sub-menu .signup-inner a {
+  color: #999;
+  font-size: 0.875rem;
+  transition: 0.4s;
+}
+nav .sub-menu .login-inner a:hover,
+nav .sub-menu .signup-inner a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+nav .sub-menu .sns-list .item {
+  float: left;
+  height: 16px;
+  margin-right: 14px;
+}
+nav .sub-menu .sns-list .item:last-child {
+  margin-right: 0;
+}
+nav .sub-menu .sns-list .item a img {
+  height: 100%;
+  vertical-align: middle;
+}
+nav .main-menu {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 80px;
+  /* overflow: hidden; */
+  height: 80px;
+}
+nav .main-menu .logo {
+  width: 10%;
+  float: left;
+}
+nav .main-menu .logo > span {
+  display: block;
+  width: 0px;
+  height: 0px;
+  font-size: 0;
+}
+nav .main-menu .logo a img {
+  height: 40px;
+  vertical-align: middle;
+}
+nav .main-menu .menu-contain {
+  width: 50%;
+  float: left;
+  /* overflow: hidden; */
+  height: 42px;
+}
+nav .main-menu .menu-contain > .menu-item {
+  float: left;
+  width: 20%;
+  text-align: center;
+  transition: 0.3s;
+  border-bottom: 4px solid transparent;
+}
+nav .main-menu .menu-contain > .menu-item > a {
+  display: block;
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+nav .main-menu > .menu-contain > .menu-item > a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  width: 0%;
+  margin: 0 auto;
+  background-color: #1d2d7b;
+  transition: 0.3s;
+}
+nav .main-menu > .menu-contain > .menu-item:hover > a:after {
+  width: 100%;
+}
+
+nav .main-menu .menu-contain > .menu-item > .depth-contain {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 551px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+nav .main-menu .menu-contain > .menu-item:hover > .depth-contain {
+  display: block;
+  border-top: 1px solid #e5e5e5;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 {
+  width: 12%;
+  float: left;
+  padding-top: 1rem;
+}
+/*고객지원 about 메뉴 스타일 별도지정 start*/
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .depth-item > .depth-01 {
+  width: 50%;
+  float: right;
+  overflow: hidden;
+  margin-top: 6%;
+  padding: 0;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .depth-item > .depth-01 > .menu-item {
+  width: 50%;
+  float: left;
+}
+/*left-el start*/
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain {
+  padding: 2rem 25%;
+  border-top: none;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item {
+  width: 50%;
+  float: left;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  text-align: left;
+  transition: 0.3s;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .bg-contain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/sup-bg-06.jpg);
+}
+
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .bg-contain::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item > .depth-01 {
+  width: 100%;
+  overflow: hidden;
+}
+
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item > .depth-01 > .menu-item {
+  float: left;
+  width: 50%;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item > .depth-01 > .menu-item > a {
+  color: rgba(255, 255, 255, 0.5);
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item > .depth-01 > .menu-item > a:hover {
+  text-decoration: underline;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item > .depth-01 > .menu-item:hover > a {
+  color: rgba(255, 255, 255, 1);
+}
+nav .main-menu .menu-contain > .menu-item.ano-type.left-el > .depth-contain > .depth-item > .depth-01 > .menu-item > a:after {
+  display: none;
+}
+/*left-el end*/
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .depth-item > .depth-01 > .menu-item > a::after {
+  right: 20%;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .depth-item > .depth-01 > .menu-item:hover > a::after {
+  right: 15%;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain {
+  width: 30%;
+  top: 20%;
+  left: 10%;
+  height: 56.25%;
+  position: absolute;
+  background: url(../img/menu-sup-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain > div {
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+  text-align: left;
+  padding-left: 5%;
+  width: 100%;
+  bottom: 0;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain > div > p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain > div > p:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain > div > p > span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain > div > p.more {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+nav .main-menu .menu-contain > .menu-item.ano-type > .depth-contain > .contain:hover > div > p.more span {
+  text-decoration: underline;
+}
+
+/*고객지원 about 메뉴 스타일 별도지정 end*/
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item {
+  width: 100%;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > a {
+  display: block;
+  color: #999;
+  line-height: 3.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > a::after {
+  content: "\003E";
+  position: absolute;
+  right: 2rem;
+  color: #1d2d7b;
+  opacity: 0;
+  transition: 0.3s;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item:hover > a::after {
+  right: 1rem;
+  opacity: 1;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item:hover > a {
+  color: #1d2d7b;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 {
+  position: absolute;
+  width: 15%;
+  left: 19.6%;
+  top: 0;
+  height: 550px;
+  overflow: auto;
+  display: none;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02::-webkit-scrollbar {
+  width: 12px;
+  background-color: #dbdde6;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02::-webkit-scrollbar-thumb {
+  background-color: #27378a;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item:hover > .depth-02 {
+  display: block;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 > .menu-item:first-child {
+  margin-top: 1rem;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 > .menu-item > a {
+  display: block;
+  line-height: 2.4rem;
+  font-size: 1rem;
+  color: #999;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 3rem;
+  transition: 0.3s;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 > .menu-item > a:hover {
+  color: #333;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 > .menu-item > a > .item-name {
+  position: relative;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 > .menu-item > a > .item-name::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #333;
+  transition: 0.3s;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain > .depth-item > .depth-01 > .menu-item > .depth-02 > .menu-item > a:hover > .item-name::before {
+  width: 100%;
+}
+/*도서소개 메뉴 시작*/
+nav .main-menu .menu-contain > .books-intro > .depth-contain > .pic-contain {
+  position: absolute;
+  left: 37%;
+  top: 20%;
+  width: 53%;
+  overflow: hidden;
+}
+nav .main-menu .menu-contain > .books-intro:hover > .depth-contain > .pic-contain > .pic-inner {
+  display: block;
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+nav .main-menu .menu-contain > .books-intro > .depth-contain > .pic-contain > .pic-inner:last-child {
+  margin-right: 0;
+}
+nav .main-menu .menu-contain > .books-intro > .depth-contain > .pic-contain > .pic-inner > img {
+  width: 100%;
+}
+nav .main-menu .menu-contain > .books-intro > .depth-contain > .pic-contain > .pic-inner .text-inner {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+nav .main-menu .menu-contain > .books-intro > .depth-contain > .pic-contain > .pic-inner .text-inner .book-title {
+  line-height: 2;
+  font-weight: 600;
+  font-size: 1rem;
+}
+nav .main-menu .menu-contain > .books-intro > .depth-contain > .pic-contain > .pic-inner .text-inner .desc {
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+/*도서소개 메뉴 종료*/
+
+/*회사소개 메뉴 시작*/
+nav .main-menu .menu-contain > .company > .depth-contain > .pic-contain {
+  background: url(../img/company-bg-02.jpg) no-repeat;
+  background-size: cover;
+  background-position: center bottom 10%;
+  position: absolute;
+  left: 37%;
+  /*width: 53%;*/
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+}
+/*nav .main-menu .menu-contain > .company > .depth-contain > .pic-contain > .pic-inner {
+  float: right;
+  width: 33%;
+  border-radius: 20px;
+  overflow:hidden;
+}
+nav .main-menu .menu-contain > .company > .depth-contain > .pic-contain > .pic-inner img {
+  width: 100%;
+}*/
+/*회사소개 메뉴 종료*/
+
+/* 북클럽 메뉴 시작 */
+
+nav .main-menu .menu-contain > .book-club > .depth-contain > .pic-contain {
+  position: absolute;
+  left: 37%;
+  top: 20%;
+  width: 53%;
+  overflow: hidden;
+}
+nav .main-menu .menu-contain > .book-club > .depth-contain > .pic-contain > .pic-inner {
+  float: left;
+  width: 50%;
+  border: 1px solid rgb(220, 220, 220);
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+nav .main-menu .menu-contain > .book-club > .depth-contain > .pic-contain > .pic-inner:hover {
+  filter: grayscale(0%);
+}
+nav .main-menu .menu-contain > .book-club > .depth-contain > .pic-contain > .pic-inner > img {
+  width: 100%;
+}
+nav .main-menu .menu-contain > .menu-item > .depth-contain #menu-bg-essay,
+nav .main-menu .menu-contain > .menu-item > .depth-contain #menu-bg-ko,
+nav .main-menu .menu-contain > .menu-item > .depth-contain #menu-bg-in {
+  display: none;
+}
+
+/* 북클럽 메뉴 종료*/
+
+/*지원 메뉴시작*/
+nav .main-menu .sup-menu {
+  width: 15%;
+  float: right;
+  overflow: hidden;
+}
+nav .main-menu .sup-menu > .menu-item {
+  width: 33.333%;
+  float: left;
+  text-align: right;
+}
+nav .main-menu .sup-menu > .menu-item span {
+  font-size: 2rem;
+  color: #666;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/*지원메뉴 종료*/
+
+/* 글로벌네비 end */
+
+/*검색창 시작*/
+
+.search-item {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  border-bottom: 1px solid #999;
+  display: none;
+}
+.search-item:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100vw;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+.search-item form input[type="search"] {
+  position: absolute;
+  width: 50%;
+  height: 4rem;
+  left: 0;
+  right: 0;
+  top: 100px;
+  margin: auto;
+  padding: 0 2rem;
+  border: 1px solid #35469b;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 40px;
+}
+.search-item form input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+.search-item form input[type="submit"] {
+  display: none;
+}
+.search-item form label {
+  position: absolute;
+  left: 70%;
+  top: calc(100px + 1.2rem);
+  height: 1.8rem;
+}
+.search-item form label span {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #35469b;
+  vertical-align: middle;
+}
+.search-item .close-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #999;
+  left: 0;
+  right: 0;
+  top: 120%;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
+}
+.search-item .close-btn > span {
+  line-height: 50px;
+  font-size: 2rem;
+  color: #666;
+}
+.search-item .tags {
+  width: 35%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 60%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.search-item .tags .tag-item {
+  width: 18.4%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  text-align: center;
+  padding: 6px 0;
+  border: 2px solid #6e77a7;
+  color: #6e77a7;
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.search-item .tags .tag-item:nth-child(n) {
+  margin-right: 0;
+}
+.search-item .tags .tag-item::before {
+  content: "# ";
+}
+/*검색창 종료*/
+
+/* footer start*/
+
+footer {
+  background-color: #dcdcdc;
+  padding: 30px 0;
+  position: relative;
+}
+
+footer .section_top {
+  overflow: hidden;
+  padding: 0 20% 32px;
+  border-bottom: 1px solid #999;
+}
+
+footer .section_top .menu-item {
+  width: 70%;
+  float: left;
+}
+footer .section_top .menu-item a {
+  color: #333;
+  font-size: 14px;
+  padding: 4px 2px;
+  margin-right: 22px;
+}
+footer .section_top .menu-item a:first-child {
+  font-weight: 600;
+  color: #000;
+  padding-right: 0;
+}
+footer .footer-family {
+  float: right;
+  text-align: left;
+  font-size: 14px;
+  background-color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  position: absolute;
+  top: 16px;
+  right: 20%;
+}
+footer .footer-family input[type="checkbox"] {
+  display: none;
+}
+footer .footer-family input[type="checkbox"]:checked ~ .sites {
+  height: 9rem;
+}
+footer .footer-family input[type="checkbox"]:checked ~ .family-site img {
+  transform: rotate(180deg);
+}
+footer .footer-family .family-site {
+  display: block;
+  position: relative;
+  width: 150px;
+  padding: 0 16px;
+  line-height: 3rem;
+  cursor: pointer;
+}
+footer .footer-family .family-site img {
+  position: absolute;
+  height: 16px;
+  top: 3px;
+  bottom: 0;
+  margin: auto 0;
+  right: 12px;
+}
+footer .footer-family .sites {
+  height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  z-index: 999;
+  transition: 0.5s;
+}
+footer .footer-family .sites li {
+  width: 133px;
+  position: relative;
+}
+footer .footer-family .sites li a {
+  display: block;
+  line-height: 3rem;
+  padding: 0 1rem;
+  background-color: #fff;
+  color: #999;
+}
+footer .footer-family .sites li a:hover {
+  color: #333;
+}
+
+footer .section_bottom {
+  padding: 38px 20% 0;
+  overflow: hidden;
+}
+footer .section_bottom .company-info {
+  color: #888;
+  font-size: 14px;
+  width: 50%;
+  float: left;
+  line-height: 1.4;
+}
+
+footer .section_bottom .company-info h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+footer .section_bottom .sns-ico {
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+footer .section_bottom .sns-ico a img {
+  height: 24px;
+  margin: 0 14px;
+}
+footer .section_bottom .sns-ico a img:last-child {
+  margin-right: 0;
+}
+/* footer end */
