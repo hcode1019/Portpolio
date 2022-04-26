@@ -24,48 +24,57 @@
 				margin: 0;
 				box-sizing: border-box;
 			}
+			body {
+				overflow-y: hidden;
+			}
 			a {
 				text-decoration: none;
 				color: #333;
 			}
 			.inner {
-				width: 100%;
-				height: 56.25vw;
-				border: 1px solid black;
-				background: url(./img/background-ge984bedc2_1920.jpg) no-repeat;
-				background-size: cover;
-				background-position: center;
 				position: relative;
+				width: 100%;
+				height: 50vw;
+				left: 0;
+				top: 0;
+				background: url(./img/milk-tea-h3fqTN2LMhU-unsplash.jpg) no-repeat;
+				background-size: cover;
+				background-position: center bottom;
 			}
 			.inner .content {
-				width: 40%;
+				width: 35%;
 				margin: 0 auto;
-				background-color: #fff;
-				height: 50vw;
+				background-color: rgba(255, 255, 255, 0.7);
+				height: 40vw;
 				position: absolute;
-				left: 50%;
-				top: 5%;
-				transform: translateX(-50%);
+				right: 5%;
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
 			}
 			.inner .content .title {
 				color: rgb(23, 30, 134);
 				font-size: 3rem;
 				font-weight: bold;
 				width: 50%;
-				margin: 250px auto 20px;
+				margin: 150px auto 20px;
+				text-align: center;
 			}
 			.inner .content .sub-title {
 				width: 50%;
 				margin: 0 auto;
 				font-size: 1.5rem;
 				color: #333;
-				margin-bottom: 40px;
+				margin-bottom: 12px;
+				text-align: center;
 			}
 			.inner .content .para {
 				width: 50%;
 				margin: 0 auto;
 				line-height: 1.4;
-				margin-bottom: 100px;
+				margin-bottom: 45px;
+				text-align: center;
+				color: #666;
 			}
 			.inner .content > div {
 				width: 50%;
@@ -91,6 +100,14 @@
 			.inner .content > div > a:last-child {
 				margin-right: 0;
 			}
+			.inner .content ul {
+				width: 80%;
+				margin: 0 auto 100px;
+			}
+			.inner .content ul li {
+				margin-bottom: 16px;
+				line-height: 1.4;
+			}
 		</style>
 	</head>
 	<body>
@@ -99,15 +116,23 @@
 				<h2 class="title">Project Design</h2>
 				<h3 class="sub-title">문학동네 리뉴얼 웹사이트</h3>
 				<p class="para">
-					문학동네는 책을통해 사람과 사람을 잇고<br />
-					더 나은 미래를 만들기 위한 자세로 오늘을 임합니다.
+					문학동네는 책을 통해 사람과 사람을 잇고 더 나은 미래를 만들기 위한
+					자세로 오늘을 임합니다.
 				</p>
+				<ul>
+					<li>본 사이트는 1920*1080 해상도에 최적화 되어있습니다</li>
+					<li>
+						홈페이지에 각 메뉴의 첫번째 서브메뉴는 서브페이지가 구현되어있습니다
+						<br />(ex 메뉴: 도서소개 - 분야별 도서 - 에세이, Signin, Signup)
+					</li>
+					<li>
+						다양한 콘텐츠를 상호동적반응과 애니메이션을 통해 Ui를 구현하였으며
+						직관적이고 효율적인 디자인 및 퍼블리싱 통하여 높은 Ux를 제공 할 수
+						있도록 제작하였습니다
+					</li>
+				</ul>
 				<div>
-					<a
-						href="https://hansol-munhak-info.netlify.app/index.html"
-						class="btn"
-						>리뉴얼 웹사이트</a
-					>
+					<a href="./MunhakDongne/index.html" class="btn">리뉴얼 웹사이트</a>
 					<a href="https://www.munhak.com/" class="btn">기존 웹사이트</a>
 				</div>
 			</div>
